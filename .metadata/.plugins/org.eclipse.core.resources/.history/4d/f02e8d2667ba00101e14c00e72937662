@@ -1,0 +1,48 @@
+package com.irene.paymentService.dto;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
+
+public class PaymentRequestDto {
+	@Min(value = 1, message = "Quantity must be at least 1")
+	private Long orderId;
+
+	@Positive
+	private Double amount;
+
+	@NotNull
+	@Pattern(regexp = "CARD|UPI|NET_BANKING|WALLET|COD", message = "Invalid payment method")
+	private String paymentMethod;
+
+	public Long getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(Long orderId) {
+		this.orderId = orderId;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+
+	@Override
+	public String toString() {
+		return "PaymentRequestDto [orderId=" + orderId + ", amount=" + amount + ", paymentMethod=" + paymentMethod
+				+ "]";
+	}
+}

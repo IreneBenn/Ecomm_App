@@ -1,0 +1,34 @@
+package com.irene.paymentService.service;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.irene.paymentService.dto.PaymentRequestDto;
+import com.irene.paymentService.entity.util.PaymentStatus;
+
+@Service
+public class PaymentService {
+
+	public ResponseEntity<String> makePayment(PaymentRequestDto req) {
+		PaymentStatus status = simulatePayment(req.getPaymentMethod());
+		return null;
+	}
+
+	private PaymentStatus simulatePayment(String paymentMethod) {
+		
+		if(paymentMethod.equals("CARD"))
+		{
+			
+		}
+		else if(paymentMethod.equals("UPI"))
+		{
+			
+		}
+		else if(paymentMethod.equals("NET_BANKING"))
+		{
+			
+		}
+		return null;
+	}
+	
+}

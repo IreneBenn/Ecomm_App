@@ -1,0 +1,33 @@
+package com.irene.paymentService.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.irene.paymentService.dto.PaymentRequestDto;
+import com.irene.paymentService.dto.PaymentResponseDto;
+import com.irene.paymentService.service.PaymentService;
+
+@RestController
+@RequestMapping("/Payment")
+public class PaymentController {
+
+	@Autowired
+	PaymentService paymentService;
+
+	@PostMapping("/")
+	public ResponseEntity<String> orderPayment(@RequestBody PaymentRequestDto req) {
+		return paymentService.makePayment(req);
+	}
+
+	
+	}
+}

@@ -1,0 +1,16 @@
+1761751608596	Rename type 'ProductServiceApplication'
+1761751632386	Rename package 'com.irene.productService'
+1761751646468	Rename package 'com.irene.productService.controller'
+1761751660578	Rename package 'com.irene.productService.dto'
+1761751673431	Rename package 'com.irene.productService.entity'
+1761751685006	Rename package 'com.irene.productService.exception'
+1761751703380	Rename package 'com.irene.productService.repository'
+1761751718435	Rename package 'com.irene.productService.service'
+1761752819897	Rename type 'Inventory'
+1761753071571	Delete element
+1761753192568	Move compilation unit
+1761753376852	Rename type 'InventoryItemRequest'
+1761753439258	Rename type 'InventoryResponse'
+1761753622958	Rename type 'ProductRepository'
+1761753639902	Rename type 'ProductService'
+1761753660818	Rename type 'ProductController'

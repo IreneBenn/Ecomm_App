@@ -1,0 +1,48 @@
+package com.irene.paymentService.service;
+
+import java.util.Random;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.irene.paymentService.dto.PaymentRequestDto;
+import com.irene.paymentService.entity.util.PaymentStatus;
+
+@Service
+public class PaymentService {
+
+	public ResponseEntity<String> makePayment(PaymentRequestDto req) {
+		PaymentStatus status = simulatePayment(req.getPaymentMethod(), req.getAmount());
+		return null;
+	}
+
+	private PaymentStatus simulatePayment(String paymentMethod, double amt) {
+		
+		Random random = new Random();
+		switch (paymentMethod) 
+		{
+		 case "CARD":
+	            return amt > 10000 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+
+	        case "UPI":
+	            return random.nextDouble() < 0.7 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+
+	        case "NET_BANKING":
+	            return amount % 100 == 0 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+		}
+//		if(paymentMethod.equals("CARD"))
+//		{
+//			return amt>10000 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED; 
+//		}
+//		else if(paymentMethod.equals("UPI"))
+//		{
+//			return random.nextDouble() < 0.7 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+//		}
+//		else if(paymentMethod.equals("NET_BANKING"))
+//		{
+//			return amt % 100 == 0 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+//		}
+		return null;
+	}
+	
+}

@@ -1,0 +1,52 @@
+package com.irene.paymentService.service;
+
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.jaxb.SpringDataJaxb.OrderDto;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import com.irene.orderService.exception.OrderNotFoundException;
+import com.irene.paymentService.dto.PaymentRequestDto;
+import com.irene.paymentService.entity.util.PaymentStatus;
+import com.irene.paymentService.feign.PaymentInterface;
+
+@Service
+public class PaymentService {
+	@Autowired
+	PaymentInterface pymtInt;
+	public ResponseEntity<String> makePayment(PaymentRequestDto req) {
+		try 
+		{
+			ResponseEntity<OrderDto> orderById = pymtInt.getOrderById(req.getOrderId());
+			if(orderById.getStatusCode() == httpst))
+		}
+		catch(OrderNotFoundException ex)
+		{
+			
+		}
+		PaymentStatus status = simulatePayment(req.getPaymentMethod(), req.getAmount());
+		
+		return null;
+	}
+
+	private PaymentStatus simulatePayment(String paymentMethod, double amt) {
+		
+		Random random = new Random();
+		switch (paymentMethod) 
+		{
+			case "CARD":
+				return amt > 10000 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+	
+			case "UPI":
+				return random.nextDouble() < 0.7 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+	
+			case "NET_BANKING":
+				return amt % 100 == 0 ? PaymentStatus.SUCCESS : PaymentStatus.FAILED;
+			default:
+				return PaymentStatus.FAILED;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_db
+    username: irene
+    password: Irene@2000
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: order-service
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+    com.irene.orderService: DEBUG
+  file:
+    path: logs
+  logback:
+    rollingpolicy:
+      file-name-pattern: logs/app-%d{yyyy-MM-dd}.log
+      max-history: 7

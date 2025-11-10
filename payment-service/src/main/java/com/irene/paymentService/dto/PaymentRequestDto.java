@@ -11,7 +11,7 @@ public class PaymentRequestDto {
 	@Positive(message = "Amount must be greater than 0")
 	private Double amount;
 	@NotNull
-	@Pattern(regexp = "CARD|UPI|NET_BANKING", message = "Invalid payment method")
+//	@Pattern(regexp = "CARD|UPI|NET_BANKING", message = "Invalid payment method")
 	private String paymentMethod;
 
 	public Long getOrderId() {

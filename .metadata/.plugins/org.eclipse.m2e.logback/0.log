@@ -2964,3 +2964,123 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact com.irene:pro
 2025-11-09 20:13:40,907 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
 2025-11-09 20:13:40,966 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@760b5b2f{HTTP/1.1, (http/1.1)}{127.0.0.1:51753}
 2025-11-09 20:13:40,976 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@59dd6d5f{STARTING}[12.0.6,sto=0] @832241ms
+2025-11-09 22:29:52,401 [Worker-60: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/order-service: com.irene:orderService:0.0.1-SNAPSHOT with classifier  to /order-service/target/classes
+2025-11-09 22:29:52,403 [Worker-60: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/product-service: com.irene:productService:0.0.1-SNAPSHOT with classifier  to /product-service/target/classes
+2025-11-09 22:29:54,713 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 22:29:54,759 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 22:29:54,767 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:09:25,688 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:09:25,811 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:09:25,821 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:12:57,936 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:12:57,998 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:12:58,005 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:17:51,786 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:17:51,853 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:17:51,859 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:19:03,906 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:19:04,028 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:19:04,037 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:19:30,255 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:19:30,310 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:19:30,317 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:20:44,637 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:20:44,645 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:20:44,649 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:22:05,781 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:22:05,809 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:22:05,820 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:23:31,966 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:23:31,979 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:23:31,985 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:24:52,517 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:24:52,531 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:24:52,537 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:25:25,813 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:25:25,822 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:25:25,830 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:25:33,247 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:25:33,309 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:25:33,316 [Worker-77: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:25:53,656 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:25:53,663 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:25:53,671 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:26:22,198 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:26:22,208 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:26:22,214 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:26:59,097 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:26:59,106 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:26:59,112 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:27:14,948 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:27:15,002 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:27:15,011 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:29:57,289 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:29:57,299 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:29:57,305 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:31:28,631 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:31:28,638 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:31:28,644 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:36:06,583 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:36:06,592 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:36:06,599 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:36:38,448 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:36:38,456 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:36:38,461 [Worker-84: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:36:49,664 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-09 23:36:49,670 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-09 23:36:49,675 [Worker-83: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-09 23:37:02,483 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@59dd6d5f{STOPPING}[12.0.6,sto=0]
+2025-11-09 23:37:02,491 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@760b5b2f{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-11-10 21:45:51,065 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-11-10 21:53:24,605 [Worker-4: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/order-service: com.irene:orderService:0.0.1-SNAPSHOT with classifier  to /order-service/target/classes
+2025-11-10 21:53:24,607 [Worker-4: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/product-service: com.irene:productService:0.0.1-SNAPSHOT with classifier  to /product-service/target/classes
+2025-11-10 21:53:25,592 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 21:53:25,614 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 21:53:25,618 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:25:51,145 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.0.6; built: 2024-01-30T02:43:24.387Z; git: 78ab6e6ba163f89cdd97f2ae0283fbb5e371cfaf; jvm 17.0.10+7
+2025-11-10 22:25:51,192 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@2ab81c27{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@43aa8dc9{STARTED}}
+2025-11-10 22:25:51,193 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-10 22:25:51,224 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3be35d34{HTTP/1.1, (http/1.1)}{127.0.0.1:51430}
+2025-11-10 22:25:51,256 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@1cea9ed0{STARTING}[12.0.6,sto=0] @4954371ms
+2025-11-10 22:26:24,866 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:26:24,878 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:26:24,881 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:47:29,713 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:47:29,722 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:47:29,725 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:48:23,957 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:48:23,961 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:48:23,964 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:48:28,456 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:48:28,459 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:48:28,462 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:48:38,935 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:48:38,938 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:48:38,941 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:48:56,456 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:48:56,462 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:48:56,468 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:49:58,111 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:49:58,120 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:49:58,128 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:50:09,647 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:50:09,655 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:50:09,663 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:50:19,097 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:50:19,105 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:50:19,110 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:50:58,152 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:50:58,160 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:50:58,168 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:51:09,743 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:51:09,751 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:51:09,756 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:51:26,739 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:51:26,746 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:51:26,753 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:51:40,980 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:51:40,989 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:51:40,994 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources
+2025-11-10 22:55:43,600 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-11-10 22:55:43,607 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-11-10 22:55:43,614 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\irene\eclipse-workspace\E-Comm_Appln\payment-service\src\test\resources

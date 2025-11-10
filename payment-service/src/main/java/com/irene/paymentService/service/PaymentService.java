@@ -1,5 +1,6 @@
 package com.irene.paymentService.service;
 
+import java.util.List;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,38 +24,33 @@ public class PaymentService {
 	
 	@Autowired
 	PaymentRepository repo;
+
 	public ResponseEntity<String> makePayment(PaymentRequestDto req) {
 		Payment pymt = new Payment();
 		pymt.setOrderId(req.getOrderId());
 		pymt.setAmount(req.getAmount());
-		try 
-		{
-			ResponseEntity<OrderDto> orderById = pymtInt.getOrderById(req.getOrderId());
-			if(orderById.getStatusCode() == HttpStatus.ACCEPTED)
-			{
-				pymt.setPaymentMethod(req.getPaymentMethod());
-				PaymentStatus status = simulatePayment(req.getPaymentMethod(), req.getAmount());
-				if(status.equals(PaymentStatus.SUCCESS))
-				{
-					pymt.setStatus(PaymentStatus.SUCCESS);
-				}
-				else
-				{
-					pymt.setStatus(PaymentStatus.FAILED);
-					repo.save(pymt);
-					return new ResponseEntity<>("Payment Failed!! Invalid Payment Method", HttpStatus.BAD_REQUEST);	
-				}
-				repo.save(pymt);
-			}
-		}
-		catch(OrderNotFoundException ex)
-		{
-			pymt.setPaymentMethod(req.getPaymentMethod());
+		pymt.setPaymentMethod(req.getPaymentMethod());
+		PaymentStatus status = PaymentStatus.SUCCESS;
+		pymt.setStatus(status);
+		String message = "Payment Success";
+		HttpStatus sts = HttpStatus.OK;
+		try {
+			pymtInt.getOrderById(req.getOrderId());
+		} catch (OrderNotFoundException ex) {
+			message = "Payment Failed!! No Such Order found";
+			sts = HttpStatus.BAD_REQUEST;
 			pymt.setStatus(PaymentStatus.FAILED);
 			repo.save(pymt);
-			return new ResponseEntity<>("Payment Failed!! No Such Order found", HttpStatus.BAD_REQUEST);	
+			return new ResponseEntity<>(message, sts);
 		}
-		return new ResponseEntity<>("Payment Success", HttpStatus.OK);		
+		status = simulatePayment(req.getPaymentMethod(), req.getAmount());
+		if (!status.equals(PaymentStatus.SUCCESS)) {
+			message = "Payment Failed!! Invalid Payment Method";
+			sts = HttpStatus.BAD_REQUEST;
+		}
+		pymt.setStatus(status);
+		repo.save(pymt);
+		return new ResponseEntity<>(message, sts);
 	}
 
 	private PaymentStatus simulatePayment(String paymentMethod, double amt) {
@@ -73,5 +69,15 @@ public class PaymentService {
 			default:
 				return PaymentStatus.FAILED;
 		}
+	}
+
+	public ResponseEntity<Payment> getPaymentById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public ResponseEntity<List<Payment>> getAllPayments() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

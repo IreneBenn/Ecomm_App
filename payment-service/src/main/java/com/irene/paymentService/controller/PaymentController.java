@@ -1,13 +1,21 @@
 package com.irene.paymentService.controller;
 
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.irene.orderService.dto.OrderDto;
 import com.irene.paymentService.dto.PaymentRequestDto;
+import com.irene.paymentService.entity.Payment;
 import com.irene.paymentService.service.PaymentService;
 
 import jakarta.validation.Valid;
@@ -19,8 +27,23 @@ public class PaymentController {
 	@Autowired
 	PaymentService paymentService;
 
+	private static final Logger log = LoggerFactory.getLogger(PaymentController.class);
+	
 	@PostMapping("/")
 	public ResponseEntity<String> orderPayment(@Valid @RequestBody PaymentRequestDto req) {
 		return paymentService.makePayment(req);
+	}
+	@GetMapping("/{id}")
+	public ResponseEntity<Payment> getPaymentById(@PathVariable Long id)
+	{
+		log.info("Inside getPaymentById");
+		return paymentService.getPaymentById(id);
+	}
+	
+	@GetMapping("/all")
+	public ResponseEntity<List<Payment>> getAllPayments()
+	{
+		log.info("Inside getAllPayments");
+		return paymentService.getAllPayments();
 	}
 }

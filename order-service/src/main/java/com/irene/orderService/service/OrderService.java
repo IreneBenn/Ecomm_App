@@ -21,6 +21,8 @@ import com.irene.orderService.repository.OrderRepository;
 import com.irene.productService.dto.InventoryItemRequest;
 import com.irene.productService.dto.InventoryResponse;
 
+import feign.FeignException;
+
 @Service
 public class OrderService{
 	
@@ -34,7 +36,8 @@ public class OrderService{
 	public ResponseEntity<String> createOrder (OrderDto odrReq)
 	{
 		log.info("Inside createOrder service");
-		boolean flag;
+		int flag;
+		String msg;
 		Order order = new Order();
 		order.setCustomerName(odrReq.getCustomerName());
 		List<OrderItem> orderItems = new ArrayList<OrderItem>();
@@ -48,10 +51,14 @@ public class OrderService{
 		order.setItems(orderItems);
 		for (OrderItem i : order.getItems()) {
 			flag = reserveStock(i);
-			if (!flag) {
+			if (flag != 0) {
+				if(flag == 99)
+					msg = "Product Not Available - ";
+				else
+					msg = "Insufficient stock for - ";
 				order.setStatus("FAILED");
 				odrRepo.save(order);
-				return new ResponseEntity<>("Insufficient stock for " + i.getProductName(), HttpStatus.BAD_REQUEST);
+				return new ResponseEntity<>(msg + i.getProductName(), HttpStatus.BAD_REQUEST);
 			}
 		}
 		order.setStatus("CONFIRMED");
@@ -65,11 +72,11 @@ public class OrderService{
 		Optional<Order> byId = odrRepo.findById(id);
 		if (!byId.isPresent())
 			 throw new OrderNotFoundException("Order Not Found");
-		
+		Order odr = byId.get();
 		OrderDto odrDto = new OrderDto();
-		odrDto.setCustomerName(byId.get().getCustomerName());
+		odrDto.setCustomerName(odr.getCustomerName());
 		
-		List<OrderItem> items = byId.get().getItems();
+		List<OrderItem> items = odr.getItems();
 		List<OrderItemDto> odrItmDtos = new ArrayList<OrderItemDto>();
 		for(OrderItem item: items)
 		{
@@ -110,7 +117,8 @@ public class OrderService{
 	public ResponseEntity<String> deleteById(Long id){
 		log.info("Inside deleteById Service");
 		Optional<Order> byId = odrRepo.findById(id);
-		boolean flag;
+		int flag;
+		String msg = "";
 		if(!byId.isPresent())
 			 throw new OrderNotFoundException("Order Not Found");
 		if(byId.get().getStatus().equalsIgnoreCase("CONFIRMED") || byId.get().getStatus().equalsIgnoreCase("PAID"))
@@ -120,30 +128,43 @@ public class OrderService{
 			{
 				log.debug(i.toString());
 				flag = restoreStock(i);
-				if(!flag)
-					log.warn("Partial stock restore for order id {}");
-			    // maybe trigger alert or retry later
+				if(flag == 1)
+					return new ResponseEntity<> ("Product Not found to delete", HttpStatus.NOT_FOUND);
+				else
+					msg = "Cancelled Successfully";
 			}
 		}
+		else if(byId.get().getStatus().equalsIgnoreCase("CANCELLED"))
+			return new ResponseEntity<> ("Order Already in Cancelled Status", HttpStatus.CONFLICT); 
 		byId.get().setStatus("CANCELLED");
 		log.debug(byId.get().getCustomerName()+" "+ byId.get().getId()+ " "+ byId.get().getItems());
 		odrRepo.save(byId.get());
-		return new ResponseEntity<> ("Cancelled Successfully", HttpStatus.OK);
+		return new ResponseEntity<> (msg, HttpStatus.OK);
 	}
 	
 //	reserveStock(items) → Check + reduce stock (on create)
 //	restoreStock(items) → Add stock back (on cancel)
 	
-	public boolean reserveStock(OrderItem i)
+	public int reserveStock(OrderItem i)
 	{
 		log.info("Inside reserveStock");
-		boolean res = true;
-		ResponseEntity<InventoryResponse> checkStock = odrFeign.checkStock(i.getProductName());
+		int res = 0;
+		ResponseEntity<InventoryResponse> checkStock = null;
+		try
+		{
+			checkStock = odrFeign.checkStock(i.getProductName());
+		}
+		catch(FeignException.NotFound ex)
+		{
+			log.error("Product Not found");
+			res = 99;
+			return res;
+		}
 		InventoryResponse body = checkStock.getBody();
 		if(body == null || body.getAvailableQuantity() < i.getQuantity())
 		{
-			log.warn("Insufficient Stock");
-			res = false;
+			log.error("Insufficient Stock");
+			res = 1;
 			return res;
 		}
 		else
@@ -159,25 +180,37 @@ public class OrderService{
 		return res;
 	}
 	
-	public boolean restoreStock(OrderItem item)
+	public int restoreStock(OrderItem item)
 	{
 		log.info("Inside restoreStock");
-		boolean res = false;
+		int res = 0;
 		InventoryItemRequest req = new InventoryItemRequest();
-		ResponseEntity<InventoryResponse> stockDtl = odrFeign.checkStock(item.getProductName());
-		if(stockDtl.getStatusCode() == HttpStatus.NOT_FOUND)
+		ResponseEntity<InventoryResponse> stockDtl = null;
+		try
 		{
-			log.warn("Product Not found");
+			log.debug("name of the product::"+item.getProductName());
+			stockDtl = odrFeign.checkStock(item.getProductName());
+		}
+		catch(FeignException.NotFound ex)
+		{
+			log.error("Product Not found");
+			res = 1;
 			return res;
 		}
-		else
-		{
+//		if(stockDtl.getStatusCode() == HttpStatus.NOT_FOUND)
+//		{
+//			log.warn("Product Not found");
+//			return res;
+//		}
+//		else
+//		{
+		log.debug("Product in stock");
 			req.setAvailableQuantity(stockDtl.getBody().getAvailableQuantity()+item.getQuantity());
 			req.setProductName(item.getProductName());
 			odrFeign.updateStock(req);
 			log.info("Stock Restored");
-			res = true;
-		}
+//			res = true;
+//		}
 		return res;
 	}
 

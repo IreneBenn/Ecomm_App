@@ -29,7 +29,7 @@ public class PaymentController {
 
 	private static final Logger log = LoggerFactory.getLogger(PaymentController.class);
 	
-	@PostMapping("/")
+	@PostMapping("/makepayment")
 	public ResponseEntity<String> orderPayment(@Valid @RequestBody PaymentRequestDto req) {
 		return paymentService.makePayment(req);
 	}

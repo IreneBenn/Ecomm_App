@@ -1,6 +1,7 @@
 package com.irene.paymentService.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +9,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.irene.orderService.exception.OrderNotFoundException;
 import com.irene.paymentService.dto.PaymentRequestDto;
 import com.irene.paymentService.entity.Payment;
 import com.irene.paymentService.entity.util.PaymentStatus;
+import com.irene.paymentService.exception.PaymentNotFoundException;
 import com.irene.paymentService.feign.PaymentInterface;
 import com.irene.paymentService.repository.PaymentRepository;
+
+import feign.FeignException;
 
 @Service
 public class PaymentService {
@@ -34,7 +37,7 @@ public class PaymentService {
 		HttpStatus sts = HttpStatus.OK;
 		try {
 			pymtInt.getOrderById(req.getOrderId());
-		} catch (OrderNotFoundException ex) {
+		} catch (FeignException.NotFound ex) {
 			message = "Payment Failed!! No Such Order found";
 			sts = HttpStatus.BAD_REQUEST;
 			pymt.setStatus(PaymentStatus.FAILED);
@@ -70,12 +73,16 @@ public class PaymentService {
 	}
 
 	public ResponseEntity<Payment> getPaymentById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Payment> byId = repo.findById(id);
+		if(!byId.isPresent())
+			throw new PaymentNotFoundException("Payment Not Found");
+		
+		Payment pymt = byId.get();
+		return new ResponseEntity<>(pymt, HttpStatus.OK);
 	}
 
 	public ResponseEntity<List<Payment>> getAllPayments() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Payment> all = repo.findAll();
+		return new ResponseEntity<>(all, HttpStatus.OK);
 	}
 }

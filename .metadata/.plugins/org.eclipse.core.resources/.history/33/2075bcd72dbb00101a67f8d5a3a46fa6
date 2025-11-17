@@ -1,8 +1,0 @@
-package com.irene.paymentService.feign;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-@FeignClient("PAYMENT-SERVICE")
-public interface PaymentInterface {
-
-}

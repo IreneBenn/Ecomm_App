@@ -49,7 +49,7 @@ public class OrderController {
 		return orderservice.getAllOrders();
 	}
 	
-	@DeleteMapping("orders/{id}")
+	@DeleteMapping("orders/delete/{id}")
 	public ResponseEntity<String> cancelOrder(@PathVariable Long id)
 	{
 		log.info("Inside cancelOrder");

@@ -7,13 +7,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
+@ControllerAdvice
 public class GlobalExceptionHandler {
-
 	@ExceptionHandler(ProductNotFoundException.class)
 	public ResponseEntity<Map<String, String>> handleOrderNotFoud(ProductNotFoundException ex)
 	{
+		System.out.println("inside product not found");
 		Map<String, String> error = new HashMap<String, String>();
 		error.put("error", ex.getMessage());
 		error.put("status", String.valueOf(HttpStatus.NOT_FOUND.value()));
@@ -29,7 +30,4 @@ public class GlobalExceptionHandler {
         }
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
 	}
-	
-
-
 }

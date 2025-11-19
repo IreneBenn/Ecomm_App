@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\irene\eclipse-workspace\E-Comm_Appln\api-gateway"/>
 			<item value="C:\Users\irene\eclipse-workspace\E-Comm_Appln\service-registry"/>
 			<item value="C:\Users\irene\eclipse-workspace\E-Comm_Appln"/>
 		</list>

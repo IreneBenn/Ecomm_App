@@ -29,18 +29,18 @@ public class ProductController {
 		return productservice.addProduct(req);
 	}
 
-	@GetMapping("/{productName}")
+	@GetMapping("/get/{productName}")
 	public ResponseEntity<InventoryResponse> checkStock(@PathVariable("productName") String prdtName) {
 		System.out.println("Inside checkStock Cntlr");
 		return productservice.getStockDtlsForPrdt(prdtName);
 	}
 
-	@GetMapping("/")
+	@GetMapping("/getAll")
 	public ResponseEntity<List<InventoryResponse>> listAllProducts() {
 		return productservice.getAllProducts();
 	}
 	
-	@PutMapping("/update")
+	@PutMapping("/update/product")
 	public ResponseEntity<String> updateStock(@RequestBody InventoryItemRequest req) {
 		System.out.println("Inside updateStock Cntlr");
 		return productservice.updateProduct(req);

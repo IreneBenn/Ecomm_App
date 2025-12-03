@@ -1,1 +1,16 @@
 /.metadata/
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# Maven
+target/
+**/target/
+
+# Others
+*.class
+*.jar
+*.war
+*.zip

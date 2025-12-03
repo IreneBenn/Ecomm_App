@@ -1,27 +1,15 @@
-/.metadata/
 # Eclipse
 .project
 .classpath
 .settings/
-.factorypath
+.metadata/
 
 # Maven
 target/
 **/target/
 
-# Java
+# Others
 *.class
 *.jar
 *.war
-
-# Logs
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Archives
 *.zip
-*.tar
-*.gz

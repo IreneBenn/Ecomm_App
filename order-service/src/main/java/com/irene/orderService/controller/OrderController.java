@@ -28,28 +28,28 @@ public class OrderController {
 	
 	private static final Logger log = LoggerFactory.getLogger(OrderController.class);
 
-	@PostMapping("/createOrder")
+	@PostMapping("/create")
 	public ResponseEntity<String> createOrder(@Valid @RequestBody OrderDto odrReq)
 	{
 		log.info("Inside createOrder");
 		return orderservice.createOrder(odrReq);
 	}
 	
-	@GetMapping("/orders/{id}")
+	@GetMapping("/get/{id}")
 	public ResponseEntity<OrderDto> getOrderById(@PathVariable Long id)
 	{
 		log.info("Inside getOrderById");
 		return orderservice.getOrderById(id);
 	}
 	
-	@GetMapping("/all")
+	@GetMapping("/getall")
 	public ResponseEntity<List<OrderDto>> getAllOrders()
 	{
 		log.info("Inside getAllOrders");
 		return orderservice.getAllOrders();
 	}
 	
-	@DeleteMapping("orders/delete/{id}")
+	@DeleteMapping("delete/{id}")
 	public ResponseEntity<String> cancelOrder(@PathVariable Long id)
 	{
 		log.info("Inside cancelOrder");

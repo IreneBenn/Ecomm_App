@@ -33,17 +33,15 @@ public class PaymentController {
 	public ResponseEntity<String> orderPayment(@Valid @RequestBody PaymentRequestDto req) {
 		return paymentService.makePayment(req);
 	}
-	@GetMapping("/{id}")
+	@GetMapping("/get/{id}")
 	public ResponseEntity<Payment> getPaymentById(@PathVariable Long id)
 	{
-		log.info("Inside getPaymentById");
 		return paymentService.getPaymentById(id);
 	}
 	
-	@GetMapping("/all")
+	@GetMapping("/getall")
 	public ResponseEntity<List<Payment>> getAllPayments()
 	{
-		log.info("Inside getAllPayments");
 		return paymentService.getAllPayments();
 	}
 }

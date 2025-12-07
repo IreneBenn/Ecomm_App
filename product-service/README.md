@@ -33,3 +33,9 @@ Handles product stocking, updating, retrieval.
 
 ### 🔹Update product
 **PUT** - `/Inventory/update/product` - Deletion of order based on the given id
+
+### 🔹Run
+```bash
+cd product-service
+mvn spring-boot:run
+```

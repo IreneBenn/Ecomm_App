@@ -35,3 +35,8 @@ Creates an order if product stock is available.
 ### 🔹 Get all payments
 **GET** - /Payment/getall
 
+### 🔹Run
+```bash
+cd payment-service
+mvn spring-boot:run
+```

@@ -23,6 +23,7 @@ Creates an order if product stock is available.
 
 ### 🔹 Get order by ID
 **GET** - `/order/get/{id}`
+
 **Sample Response**
 ```json
 {

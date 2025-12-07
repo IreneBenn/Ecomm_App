@@ -12,17 +12,19 @@ Communicates with Product Service to validate and restore stock.
 Creates an order if product stock is available.
 
 **Sample Request**
-json
+```json
 {
   "customerName": "Deepika",
   "items": [
     {"productName": "keyboard", "quantity": 1}
   ]
 }
+```
 
 ### 🔹 Get order by ID
 **GET** - `/order/get/{id}`
-Sample Response:
+**Sample Response**
+```json
 {
     "customerName": "Joan",
     "items": [
@@ -40,7 +42,9 @@ Sample Response:
         }
     ]
 }
-Get all orders
-GET - /order/getall
-Delete Order
-DELETE - /order/delete/{id} - Deletion of order based on the given id
+```
+### 🔹 Get all orders
+**GET** - /order/getall
+
+### 🔹Delete Order
+**DELETE** - /order/delete/{id} - Deletion of order based on the given id

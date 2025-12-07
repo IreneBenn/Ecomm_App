@@ -32,7 +32,7 @@ Handles product stocking, updating, retrieval.
 **GET** - `/Inventory/getall`
 
 ### 🔹Update product
-**PUT** - `/Inventory/update/product` - Deletion of order based on the given id
+**PUT** - `/Inventory/update/product` 
 
 ### 🔹Run
 ```bash

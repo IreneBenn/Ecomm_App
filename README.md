@@ -7,9 +7,9 @@ This project demonstrates modular design and communication between independent s
 
 ## 🚀 Features
 
-- **Product Service** – Manages product catalog and inventory  
-- **Order Service** – Handles order placement and tracking  
-- **Payment Service** – Processes and validates payments  
+- **Product Service**
+- **Order Service**
+- **Payment Service**
 - RESTful APIs for inter-service communication  
 - Built with **Spring Boot** and **Maven**
 
@@ -20,4 +20,8 @@ This project demonstrates modular design and communication between independent s
 Each service runs independently and communicates via REST APIs (Kafka integration planned).  
 Future updates will add **JWT authentication**, **Docker containerization**, and **Spring Cloud** components.
 
-
+### Prerequisites
+- Java 17+ (or your version)
+- Maven 3.8+
+- Spring Boot
+- Postman (Unit Testing)

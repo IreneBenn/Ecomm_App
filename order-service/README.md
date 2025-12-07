@@ -49,3 +49,8 @@ Creates an order if product stock is available.
 
 ### 🔹Delete Order
 **DELETE** - /order/delete/{id} - Deletion of order based on the given id
+
+```
+cd order-service
+mvn spring-boot:run
+```

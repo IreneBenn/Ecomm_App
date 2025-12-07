@@ -12,7 +12,7 @@ Communicates with Product Service to validate and restore stock.
 Creates an order if product stock is available.
 
 **Sample Request**
-```json
+json
 {
   "customerName": "Deepika",
   "items": [

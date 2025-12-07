@@ -6,7 +6,7 @@ Process payments and retrieves payment data.
 ## **Endpoints**
 
 ### 🔹 Create Payment  
-**POST** `/Payment/makepayment`  
+**POST** - `/Payment/makepayment`  
 Creates an order if product stock is available.
 
 **Sample Request**
